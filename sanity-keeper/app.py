@@ -1,7 +1,11 @@
 from flask import Flask, render_template, request, redirect, url_for, session
 from werkzeug.security import generate_password_hash, check_password_hash
+import os
 
 app = Flask(__name__)
+
+#print(os.urandom(24).hex())
+
 app.secret_key = 'your-secret-key' # change this!
 
 # For demonstration purposes we'll use a dictionary instead of a database
